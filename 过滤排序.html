@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="vue/vue.js"></script>
+</head>
+<body>
+  <div id="test">
+      <div>
+          <span v-for="n in 10">{{ n }} </span>
+        </div>
+<li v-for="a in evern(numbers)">{{a}}</li>
+
+  </div>
+  <script>
+    new Vue({
+      el:'#test',
+  data: {
+    numbers: [ 1, 2, 3, 4, 5 ]
+  },
+  methods:{
+evern:function(numbers){
+return numbers.filter(function(num){
+  return num % 2 == 1
+})
+}
+  }
+    })
+
+  </script>
+</body>
+</html>

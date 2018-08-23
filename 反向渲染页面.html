@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+ <script type="text/javascript" src="vue/vue.js"></script>
+</head>
+<body> 
+   <div id="users">
+     {{username}} {{age}}{{name}}
+   </div>
+<div id="project">
+{{name}}
+</div>
+
+<div id="root">
+
+</div>
+   <script>
+ new Vue({
+  el:"#users",
+     data:{
+       username:'huanglong',
+       age:30,
+       name:'刘彬',
+     }
+   })
+
+ var vm = new Vue({
+  el:"#project",
+     data:{
+       username:'huanglong',
+       age:30,
+       name:'ie',
+     }
+   })
+
+
+   </script>
+</body>
+</html>
