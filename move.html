@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .name {
+            height: 18px;
+            width: 200px;
+            border: 1px solid red;
+        }
+ 
+        .demo1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 20px;
+            overflow: hidden;
+            transition: all 0.2s linear;
+        }
+ 
+        .demo1>.info {
+            border: 1px solid blue;
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            opacity: 0;
+            transition: all 0.2s linear;
+        }
+ 
+        .demo1:hover {
+            /* 防止不管内容多高不会挡住 */
+            overflow: visible;
+            height: 140px;
+        }
+        .demo1:hover .info {
+            opacity: 1;
+        }
+ 
+        /* 为了保证demo1不影响整体布局，限制wrap的宽高 */
+        .wrap {
+            width: 200px;
+            height: 22px;
+            position: relative;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="wrap">
+        <div class="demo1">
+            <div class="name">小明</div>
+            <div class="info">
+                <p>个人信息</p >
+                <p>退出</p >
+            </div>
+        </div>
+    </div>
+ 
+    <div>demo后面的内容不受影响</div>
+</body>
+ 
+</html>
+ 
